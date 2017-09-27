@@ -5,6 +5,7 @@ import com.Uitl.HibernateUtils;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
+import javax.lang.model.element.Name;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,6 +21,7 @@ public class login extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username =  req.getParameter("name");
         String userpassword = req.getParameter("password");
+        System.out.println("------->name："+username+"password:"+userpassword);
         Session session = HibernateUtils.getSession();
         Query query =  session.createQuery("from  TdUser where TdUser .name = ? and TdUser .password = ?");
         query.setString(0,username);
