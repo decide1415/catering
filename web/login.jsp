@@ -37,7 +37,7 @@
               <div class="col-md-4 column">
               </div>
               <div class="col-md-4 column">
-                <form role="form">
+                <form role="form" action="login.do">
                   <div class="form-group">
                     <label for="name">用户名</label><input type="text" class="form-control" id="name" />
                   </div>
