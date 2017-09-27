@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="catering@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="catering">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="book"/>
+    <schema id="4" parent="1" name="db_hr"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="internaloa"/>
+    <schema id="7" parent="1" name="mysql"/>
+    <schema id="8" parent="1" name="performance_schema"/>
+    <schema id="9" parent="1" name="ssme"/>
+    <schema id="10" parent="1" name="ssme1"/>
+    <schema id="11" parent="1" name="statistics"/>
+    <schema id="12" parent="1" name="test"/>
+    <table id="13" parent="2" name="td_dishes"/>
+    <table id="14" parent="2" name="td_user"/>
+    <column id="15" parent="13" name="ID">
+      <Position>1</Position>
+      <Comment>菜品ID</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="16" parent="13" name="NAME">
+      <Position>2</Position>
+      <Comment>菜品名称</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="13" name="REMARKS">
+      <Position>3</Position>
+      <Comment>菜品说明</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="18" parent="13" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="19" parent="14" name="ID">
+      <Position>1</Position>
+      <Comment>用户ID</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="14" name="TYPE">
+      <Position>3</Position>
+      <Comment>用户类型</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="14" name="PASSWORD">
+      <Position>2</Position>
+      <Comment>用户密码</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="22" parent="14" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--C3P0配置 -->
+        <property name="hibernate.proxool.pool_alias">MySql</property>
+        <property name="hibernate.proxool.xml">proxool.xml</property>
+        <property name="hibernate.connection.provider_class">org.hibernate.proxool.internal.ProxoolConnectionProvider</property>
+        <property name="hibernate.proxool.existing_pool">true</property>
+        <!--显示执行的SQL语句-->
+        <property name="show_sql">true</property>
+        <!--设置Hibernate自动管理上下文的策略-->
+        <!-- Hibernate session 关闭策略-->
+        <property name="hibernate.connection.release_mode">after_statement</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/catering</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <mapping resource="com/JavaBean/TdDishes.hbm.xml"/>
+        <mapping resource="com/JavaBean/TdUser.hbm.xml"/>
+
+
+        <!-- Database connection settings -->
+
+
+
+    </session-factory>
+</hibernate-configuration>
