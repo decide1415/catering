@@ -8,5 +8,6 @@
         <id name="id" column="ID"/>
         <property name="type" column="TYPE"/>
         <property name="password" column="PASSWORD"/>
+        <property name="name" column="NAME"/>
     </class>
 </hibernate-mapping>

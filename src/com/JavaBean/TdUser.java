@@ -1,12 +1,13 @@
 package com.JavaBean;
 
 /**
- * Created by decide on 2017/9/26.
+ * Created by decide on 2017/9/27.
  */
 public class TdUser {
     private int id;
     private String type;
     private String password;
+    private String name;
 
     public int getId() {
         return id;
@@ -32,6 +33,14 @@ public class TdUser {
         this.password = password;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -42,6 +51,7 @@ public class TdUser {
         if (id != tdUser.id) return false;
         if (type != null ? !type.equals(tdUser.type) : tdUser.type != null) return false;
         if (password != null ? !password.equals(tdUser.password) : tdUser.password != null) return false;
+        if (name != null ? !name.equals(tdUser.name) : tdUser.name != null) return false;
 
         return true;
     }
@@ -51,6 +61,7 @@ public class TdUser {
         int result = id;
         result = 31 * result + (type != null ? type.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (name != null ? name.hashCode() : 0);
         return result;
     }
 }

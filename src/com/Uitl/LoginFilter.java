@@ -2,8 +2,6 @@ package com.Uitl;
 
 
 
-import com.JavaBean.TdUser;
-
 import java.io.IOException;
 
 import javax.servlet.Filter;
