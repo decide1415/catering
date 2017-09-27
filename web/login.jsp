@@ -39,10 +39,10 @@
               <div class="col-md-4 column">
                 <form role="form">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">用户名</label><input type="email" class="form-control" id="exampleInputEmail1" />
+                    <label for="name">用户名</label><input type="text" class="form-control" id="name" />
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">密码</label><input type="password" class="form-control" id="exampleInputPassword1" />
+                    <label for="password">密码</label><input type="password" class="form-control" id="password" />
                   </div>
 
                   <a id="modal-836920" href="#modal-container-836920" role="button" class="btn btn-default btn-primary" data-toggle="modal">注册</a>
