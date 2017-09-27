@@ -32,7 +32,7 @@ public class login extends HttpServlet{
                 resp.sendRedirect("/Page/main.jsp");
         }
         else {
-
+                req.getRequestDispatcher("login.jsp").forward(req,resp);
 
         }
     }
