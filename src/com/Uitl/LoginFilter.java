@@ -42,6 +42,7 @@ public class LoginFilter implements Filter {
 
         // 登陆页面无需过滤
         if(path.indexOf("login.jsp") > -1) {
+            System.out.println("--------->OK");
             chain.doFilter(servletRequest, servletResponse);
             return;
         }
