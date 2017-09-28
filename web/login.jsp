@@ -19,7 +19,16 @@
     }
 
     </style>
+<% String errcode =  "ture".equals(request.getParameter("errcode"))?"true":"false";
 
+%>
+    <script type="text/javascript">
+      if(<%=errcode%>){
+        alert("登陆失败！请检查输入的用户名密码！")
+
+      }
+
+    </script>
   </head>
   <body>
   <div class="container">
@@ -28,7 +37,7 @@
         <div class="row clearfix">
           <div class="col-md-12 column">
             <h3 class="text-center">
-              h3. 这是一套可视化布局系统.
+             用户登录
             </h3>
           </div>
         </div>
@@ -38,12 +47,13 @@
               <div class="col-md-4 column">
               </div>
               <div class="col-md-4 column">
-                <form role="form" action="login.do">
+
+                <form  action="login.do" method="get">
                   <div class="form-group">
-                    <label for="name">用户名</label><input type="text" class="form-control" id="name" />
+                    <label for="name">用户名</label><input type="text" class="form-control" id="name" name="username" />
                   </div>
                   <div class="form-group">
-                    <label for="Password">密码</label><input type="password" class="form-control" id="Password" />
+                    <label for="Password">密码</label><input type="password" class="form-control" id="Password" name="Password"/>
                   </div>
 
                   <a id="modal-836920" href="#modal-container-836920" role="button" class="btn btn-default btn-primary" data-toggle="modal">注册</a>

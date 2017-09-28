@@ -2,6 +2,8 @@ package com.Uitl;
 
 
 
+import com.JavaBean.TdUser;
+
 import java.io.IOException;
 
 import javax.servlet.Filter;
@@ -33,6 +35,7 @@ public class LoginFilter implements Filter {
 
         // 获得用户请求的URI
         String path = servletRequest.getRequestURI();
+        System.out.println(path+"--------->OK");
         //请求资源 无需过滤
         if(path.indexOf("resource")>-1){
 
@@ -42,9 +45,15 @@ public class LoginFilter implements Filter {
 
         // 登陆页面无需过滤
         if(path.indexOf("login.jsp") > -1) {
-            System.out.println("--------->OK");
+
+
             chain.doFilter(servletRequest, servletResponse);
             return;
+        }
+        if(path.indexOf(".do")>-1){
+            chain.doFilter(servletRequest, servletResponse);
+            return;
+
         }
         TdUser user = (TdUser) session.getAttribute("USER");
         // 判断如果没有取到员工信息,就跳转到登陆页面

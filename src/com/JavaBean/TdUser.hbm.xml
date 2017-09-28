@@ -5,9 +5,9 @@
 <hibernate-mapping>
 
     <class name="com.JavaBean.TdUser" table="td_user" schema="catering">
-        <id name="id" column="ID"/>
-        <property name="type" column="TYPE"/>
-        <property name="password" column="PASSWORD"/>
-        <property name="name" column="NAME"/>
+        <id name="id" column="id"/>
+        <property name="name" column="name"/>
+        <property name="password" column="password"/>
+        <property name="type" column="type"/>
     </class>
 </hibernate-mapping>
