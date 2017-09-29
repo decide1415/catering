@@ -9,5 +9,6 @@
         <property name="name" column="name"/>
         <property name="password" column="password"/>
         <property name="type" column="type"/>
+        <property name="canteentype" column="canteentype"/>
     </class>
 </hibernate-mapping>

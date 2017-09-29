@@ -55,4 +55,20 @@
         <servlet-name>login</servlet-name>
         <url-pattern>/login.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>addDishesTable</servlet-name>
+        <servlet-class>com.logic.addDishesTable</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addDishesTable</servlet-name>
+        <url-pattern>/addDishesTable.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>selectcount</servlet-name>
+        <servlet-class>com.logic.selectcount</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>selectcount</servlet-name>
+        <url-pattern>/selectcount.do</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="JSON">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/web/WEB-INF/lib/JSON" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/web/WEB-INF/lib/JSON" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/web/WEB-INF/lib/JSON" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/web/WEB-INF/lib/JSON" recursive="false" type="SOURCES" />
+  </library>
+</component>

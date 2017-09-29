@@ -5,8 +5,10 @@
 <hibernate-mapping>
 
     <class name="com.JavaBean.TdDishes" table="td_dishes" schema="catering">
-        <id name="id" column="ID"/>
-        <property name="name" column="NAME"/>
-        <property name="remarks" column="REMARKS"/>
+        <composite-id mapped="true" class="com.JavaBean.TdDishesPK">
+            <key-property name="name" column="name"/>
+            <key-property name="time" column="time"/>
+        </composite-id>
+        <property name="remarks" column="remarks"/>
     </class>
 </hibernate-mapping>
