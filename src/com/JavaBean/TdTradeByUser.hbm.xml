@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.JavaBean.TdTradeByUser" table="td_trade_by_user" schema="catering">
+    <class name="com.JavaBean.TdTradeByUser" table="td_trade_by_user" schema="catering" >
         <composite-id mapped="true" class="com.JavaBean.TdTradeByUserPK">
             <key-property name="time" column="time"/>
             <key-property name="canteentype" column="canteentype"/>

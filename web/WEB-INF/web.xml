@@ -71,4 +71,13 @@
         <servlet-name>selectcount</servlet-name>
         <url-pattern>/selectcount.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>addusertable</servlet-name>
+        <servlet-class>com.logic.addusertable</servlet-class>
+        
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addusertable</servlet-name>
+        <url-pattern>/addusertable.do</url-pattern>
+    </servlet-mapping>
 </web-app>

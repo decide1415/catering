@@ -77,4 +77,15 @@ public class TdTradeByUser {
         result = 31 * result + (canteentype != null ? canteentype.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "TdTradeByUser{" +
+                "userId=" + userId +
+                ", time=" + time +
+                ", t1Count=" + t1Count +
+                ", t2Count=" + t2Count +
+                ", canteentype='" + canteentype + '\'' +
+                '}';
+    }
 }

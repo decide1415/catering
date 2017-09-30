@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.JavaBean.TdTrade" table="td_trade" schema="catering">
+        <composite-id mapped="true" class="com.JavaBean.TdTradePK">
+            <key-property name="membername" column="membername"/>
+            <key-property name="time" column="time"/>
+        </composite-id>
+        <property name="userId" column="user_id"/>
+        <property name="dishestype" column="dishestype"/>
+        <property name="canteentype" column="canteentype"/>
+        <property name="eattype" column="eattype"/>
+    </class>
+</hibernate-mapping>

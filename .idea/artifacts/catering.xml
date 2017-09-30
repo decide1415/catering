@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="catering">
+  <artifact type="war" name="catering">
     <output-path>$PROJECT_DIR$/out/artifacts/catering</output-path>
-    <root id="root">
+    <root id="archive" name="catering.war">
       <element id="javaee-facet-resources" facet="catering/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">

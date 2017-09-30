@@ -35,7 +35,14 @@ public class login extends HttpServlet {
             //查询到用户数据
             TdUser user = userList.get(0);
             req.getSession().setAttribute("USER", user);
-            resp.sendRedirect("Page/main.jsp");
+            String type = user.getType();
+            if("canteen".equals(type)){
+                resp.sendRedirect("Page/canteenmain.jsp");
+            }else if("user".equals(type)){
+                resp.sendRedirect("Page/usermain.jsp");
+
+            }
+           // resp.sendRedirect("Page/main.jsp");
 
         } else {
             //未查询到用户数据处理
