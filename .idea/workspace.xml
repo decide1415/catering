@@ -7,36 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cb33912-2ef2-4dce-a222-0c89017911c2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resource/DL.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/JavaBean/Tradeitemsta.hbm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/JavaBean/Tradeitemsta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/JavaBean/Tradeitemstb.hbm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/JavaBean/Tradeitemstb.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/logic/exit.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/logic/selectDishes.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/logic/selectOthers.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Page/selectOthers.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resource/jquerySession.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/JavaBean/TdTradeByUserPK.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/JavaBean/TdTradePK.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/9377de9a-f790-455e-a85e-d755e9b1cf8e.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/9377de9a-f790-455e-a85e-d755e9b1cf8e.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/JavaBean/TdTrade.hbm.xml" afterPath="$PROJECT_DIR$/src/com/JavaBean/TdTrade.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/JavaBean/TdTrade.java" afterPath="$PROJECT_DIR$/src/com/JavaBean/TdTrade.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/JavaBean/TdTradeByUser.hbm.xml" afterPath="$PROJECT_DIR$/src/com/JavaBean/TdTradeByUser.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/JavaBean/TdTradeByUser.java" afterPath="$PROJECT_DIR$/src/com/JavaBean/TdTradeByUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/Uitl/LoginFilter.java" afterPath="$PROJECT_DIR$/src/com/Uitl/LoginFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/logic/addusertable.java" afterPath="$PROJECT_DIR$/src/com/logic/addusertable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/logic/login.java" afterPath="$PROJECT_DIR$/src/com/logic/login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/logic/selectcount.java" afterPath="$PROJECT_DIR$/src/com/logic/selectcount.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Page/canteenmain.jsp" afterPath="$PROJECT_DIR$/web/Page/canteenmain.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Page/usermain.jsp" afterPath="$PROJECT_DIR$/web/Page/usermain.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/login.jsp" afterPath="$PROJECT_DIR$/web/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resource/Toolcanteenmain.js" afterPath="$PROJECT_DIR$/web/resource/Toolcanteenmain.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resource/Toolusernmain.js" afterPath="$PROJECT_DIR$/web/resource/Toolusernmain.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,8 +57,8 @@
       <file leaf-file-name="Toolcanteenmain.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/resource/Toolcanteenmain.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="124" column="92" lean-forward="false" selection-start-line="124" selection-start-column="92" selection-end-line="124" selection-end-column="92" />
+            <state relative-caret-position="171">
+              <caret line="132" column="10" lean-forward="true" selection-start-line="132" selection-start-column="10" selection-end-line="132" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -1107,7 +1078,7 @@
       <workItem from="1507385502114" duration="17740000" />
       <workItem from="1507468769672" duration="18014000" />
       <workItem from="1507509825832" duration="2403000" />
-      <workItem from="1507625575907" duration="89000" />
+      <workItem from="1507625575907" duration="207000" />
     </task>
     <task id="LOCAL-00001" summary="0927">
       <created>1506477103001</created>
@@ -1165,11 +1136,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506755712813</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="1010">
+      <created>1507625716013</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1507625716013</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158917000" />
+    <option name="totallyTimeSpent" value="159035000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1182,7 +1160,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1204,10 +1182,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36557376" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.48789713" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32786885" sideWeight="0.48789713" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30559757" sideWeight="0.19180328" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30559757" sideWeight="0.8081967" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30559757" sideWeight="0.19512194" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30559757" sideWeight="0.80487806" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2473525" sideWeight="0.5057283" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2473525" sideWeight="0.512275" order="7" side_tool="true" content_ui="tabs" />
@@ -1286,7 +1264,8 @@
     <MESSAGE value="0927" />
     <MESSAGE value="0928" />
     <MESSAGE value="0930" />
-    <option name="LAST_COMMIT_MESSAGE" value="0930" />
+    <MESSAGE value="1010" />
+    <option name="LAST_COMMIT_MESSAGE" value="1010" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1714,8 +1693,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/resource/Toolcanteenmain.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="124" column="92" lean-forward="false" selection-start-line="124" selection-start-column="92" selection-end-line="124" selection-end-column="92" />
+        <state relative-caret-position="171">
+          <caret line="132" column="10" lean-forward="true" selection-start-line="132" selection-start-column="10" selection-end-line="132" selection-end-column="10" />
           <folding />
         </state>
       </provider>
