@@ -47,6 +47,14 @@
         <filter-name>loginFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+    <filter>
+        <filter-name>selectOthersfilter</filter-name>
+       <filter-class>com.logic.selectOthers</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>selectOthersfilter</filter-name>
+        <url-pattern>/Page/selectOthers.jsp</url-pattern>
+    </filter-mapping>
     <servlet>
         <servlet-name>login</servlet-name>
         <servlet-class>com.logic.login</servlet-class>
@@ -79,5 +87,21 @@
     <servlet-mapping>
         <servlet-name>addusertable</servlet-name>
         <url-pattern>/addusertable.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>selectDishes</servlet-name>
+        <servlet-class>com.logic.selectDishes</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>selectDishes</servlet-name>
+        <url-pattern>/selectDishes.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>exit</servlet-name>
+        <servlet-class>com.logic.exit</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>exit</servlet-name>
+        <url-pattern>/exit.do</url-pattern>
     </servlet-mapping>
 </web-app>

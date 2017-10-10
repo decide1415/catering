@@ -30,13 +30,13 @@
 
     </script>
   </head>
-  <body>
-  <div class="container">
+  <body style="background:url('resource/DL.jpg') no-repeat center fixed;background-size:100% 100%;" >
+  <div class="container" > <%-- border-image: url('resource/DL.jpg');background-size:100% 100%--%>
     <div class="row clearfix">
       <div class="col-md-12 column">
         <div class="row clearfix">
           <div class="col-md-12 column">
-            <h3 class="text-center">
+            <h3 class="text-center" style="color: white">
              用户登录
             </h3>
           </div>
@@ -50,10 +50,10 @@
 
                 <form  action="login.do" method="get">
                   <div class="form-group">
-                    <label for="name">用户名</label><input type="text" class="form-control" id="name" name="username" />
+                    <label for="name" style="color:white;">用户名</label><input type="text" class="form-control" id="name" name="username" />
                   </div>
                   <div class="form-group">
-                    <label for="Password">密码</label><input type="password" class="form-control" id="Password" name="Password"/>
+                    <label for="Password" style="color: white">密码</label><input type="password" class="form-control" id="Password" name="Password"/>
                   </div>
 
                   <a id="modal-836920" href="#modal-container-836920" role="button" class="btn btn-default btn-primary" data-toggle="modal">注册</a>

@@ -17,6 +17,7 @@
     <script src="../resource/bootstrap-3.3.7-dist/js//locales/bootstrap-datetimepicker.zh-CN.js"></script>
     <script src="../resource/Toolusernmain.js"></script>
     <script src="../resource/json2.js"></script>
+    <script src="../resource/jquerySession.js"></script>
 </head>
 <body>
 <div class="container">
@@ -50,7 +51,26 @@
 <div class="container">
     <div class="row clearfix">
         <div class="col-md-12 column">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <div class="row clearfix">
+                        <div class="col-md-8 column">
+                        </div>
+                        <div class="col-md-4 column">
+                            <div class="row clearfix">
+                                <div class="col-md-6 column">
+                                    <p>
 
+                                    </p>
+                                </div>
+                                <div class="col-md-6 column">
+                                    <button type="button" class="btn btn-primary btn-block btn-default" onclick="exit()" >退出</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="modal fade" id="addcanteenmain" role="dialog" aria-labelledby="addcanteeLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
                 <div class="modal-dialog">
@@ -60,6 +80,8 @@
                             <h4 class="modal-title" id="addcanteeLabel">
 
                             </h4>
+                            <input id="bigen" style="display: none"/>
+
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
@@ -67,7 +89,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="canteentype">食堂</label><select class= "form-control selectpicker"  id="canteentype" ><option>食堂一</option ><option>食堂二</option ></select>
+                                <label for="canteentype">食堂</label><select class= "form-control selectpicker"  id="canteentype" ><option name='ByST1'>食堂一</option ><option name='ByST2'>食堂二</option ></select>
                             </div>
                             <div class="form-group">
                                 <label for="eattype">就餐方式</label><select class= "form-control selectpicker"  id="eattype" ><option>打包</option ><option>食堂</option ></select>
@@ -85,28 +107,72 @@
         </div>
     </div>
 </div>
-<<div class="container">
+<div class="container">
     <div class="row clearfix">
         <div class="col-md-12 column">
             <div class="row clearfix">
+                <div class="container">
+                    <div class="row clearfix">
+                        <div class="col-md-12 column">
+                            <div class="row clearfix">
+                                <div class="col-md-5 column">
+                                    <dl>
+                                        <dt class="text-center">
+                                            <h3 id="dishes1H"></h3>
+                                        </dt>
+                                        <dd id="dishes1info">
+
+                                        </dd>
+
+                                    </dl>
+                                </div>
+                                <div class="col-md-2 column">
+                                </div>
+                                <div class="col-md-5 column">
+                                    <dl>
+                                        <dt class="text-center">
+                                          <h3 id="dishes2H"></h3>
+                                        </dt>
+                                        <dd id="dishes2info">
+
+                                        </dd>
+
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-12 column">
                     <div class="row clearfix">
                         <div class="col-md-6 column">
-                            <input type="date" class="form-control" id="suttime" />
+                            <input type="date" class="form-control" id="suttime" onchange="selectDishes($(this).val())" />
                         </div>
                         <div class="col-md-6 column">
-                            <select class= "form-control selectpicker"  id="subtype" ><option>套餐一</option ><option>套餐二</option ></select>
+                            <%--<select class= "form-control selectpicker"  id="subtype" ><option>套餐一</option ><option>套餐二</option ></select>--%>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row clearfix">
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col-md-12 column">
+                        <h3 id="ByTC1" name="套餐一"  class="text-center">
+                            套餐一
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix" >
                 <div class="col-md-12 column">
-                    <table class="table" id="addusertable">
+                    <table class="table" id="addusertableByTC1">
                         <thead>
                         <tr>
                             <th>
                               姓名
+                            </th>
+                            <th>
+                                套餐
                             </th>
                             <th>
                                食堂
@@ -119,7 +185,60 @@
                             </th>
                         </tr>
                         </thead>
-                        <tbody id="canteenbody">
+                        <tbody id="canteenbodyByTC1">
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <div class="row clearfix">
+                        <div class="col-md-4 column">
+                            <a id="modal-52640" href="#addcanteenmain" role="button" class="btn btn-primary" data-toggle="modal" onclick="addthis('ByTC1')">添加</a>
+                        </div>
+                        <div class="col-md-4 column">
+
+                        </div>
+                        <div class="col-md-4 column">
+                            <%--<button type="button" class="btn btn-primary" onclick="Confirmed()">提交</button>--%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col-md-12 column">
+                        <h3 id="ByTC2" name = "套餐二" class="text-center">
+                            套餐二
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <table class="table" id="addusertableByTC2">
+                        <thead>
+                        <tr>
+                            <th>
+                                姓名
+                            </th>
+                            <th>
+                                套餐
+                            </th>
+                            <th>
+                                食堂
+                            </th>
+                            <th>
+                                就餐方式
+                            </th>
+                            <th>
+                                操作
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody id="canteenbodyByTC2">
 
 
                         </tbody>
@@ -131,7 +250,7 @@
                     <div class="col-md-12 column">
                         <div class="row clearfix">
                             <div class="col-md-4 column">
-                                <a id="modal-52640" href="#addcanteenmain" role="button" class="btn btn-primary" data-toggle="modal" onclick="addthis()">添加</a>
+                                <a id="modal-52640" href="#addcanteenmain" role="button" class="btn btn-primary" data-toggle="modal" onclick="addthis('ByTC2')">添加</a>
                             </div>
                             <div class="col-md-4 column">
 

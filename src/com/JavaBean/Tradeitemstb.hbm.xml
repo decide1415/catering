@@ -4,14 +4,13 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.JavaBean.TdTradeByUser" table="td_trade_by_user" schema="catering">
+    <class name="com.JavaBean.Tradeitemstb" table="tradeitemstb" schema="catering">
         <id name="count" column="count"/>
         <property name="userId" column="user_id"/>
         <property name="time" column="time"/>
-        <property name="cotTcAbySta" column="cotTCAbySTA"/>
-        <property name="cotTcBbySta" column="cotTCBbySTA"/>
-        <property name="cotTcAbyStb" column="cotTCAbySTB"/>
-        <property name="cotTcBbyStb" column="cotTCBbySTB"/>
+        <property name="tcAitem" column="TCAitem"/>
+        <property name="tcBitem" column="TCBitem"/>
+
         <property name="userName" column="user_name"/>
     </class>
 </hibernate-mapping>

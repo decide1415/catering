@@ -11,12 +11,15 @@
     <title>餐品管理</title>
     <link href="../resource/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="../resource/jquery-2.1.4.min.js"></script>
+    <script src="../resource/jquerySession.js"></script>
     <script src="../resource/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <link href="../resource/bootstrap-3.3.7-dist/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
     <script src="../resource/bootstrap-3.3.7-dist/js/bootstrap-datetimepicker.js"></script>
     <script src="../resource/bootstrap-3.3.7-dist/js//locales/bootstrap-datetimepicker.zh-CN.js"></script>
     <script src="../resource/Toolcanteenmain.js"></script>
     <script src="../resource/json2.js"></script>
+
+
 </head>
 <body>
 <div class="container">
@@ -31,11 +34,11 @@
                             <div class="row clearfix">
                                 <div class="col-md-6 column">
                                     <p>
-                                        欢迎
+
                                     </p>
                                 </div>
                                 <div class="col-md-6 column">
-                                    <button type="button" class="btn btn-primary btn-block btn-default" >添加</button>
+                                    <button type="button" class="btn btn-primary btn-block btn-default" onclick="exit()" >退出</button>
                                 </div>
                             </div>
                         </div>
@@ -60,19 +63,27 @@
                                     <div class="row clearfix">
                                         <div class="col-md-12 column">
                                             <div class="row clearfix">
-                                                <div class="col-md-4 column">
+                                                <div class="col-md-2 column">
+                                                    <h4 class="text-center">查询条件</h4>
+                                                </div>
+                                                <div class="col-md-7 column">
                                                     <div class="row clearfix">
-                                                        <div class="col-md-6 column">
+                                                        <div class="col-md-4 column">
+
                                                             <input type="date" class="form-control" id="selecttime" />
                                                         </div>
-                                                        <div class="col-md-6 column">
-                                                            <button type="button" class="btn btn-default btn-primary">查询</button>
+                                                        <div class="col-md-4 column">
+
+                                                            <select class= "form-control selectpicker"  id="selecttype" ><option>食堂一</option ><option>食堂二</option ></select>
+
+                                                        </div>
+                                                        <div class="col-md-4 column">
+                                                            <button type="button" class="btn btn-default btn-primary" onclick="seelctcount()">查询</button>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4 column">
-                                                </div>
-                                                <div class="col-md-4 column">
+
+                                                <div class="col-md-1 column">
                                                 </div>
                                             </div>
                                             <div class="row clearfix">

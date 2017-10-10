@@ -2,7 +2,8 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/src/com/Uitl/CharactorFilter.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/com/logic/addusertable.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/logic/addusertable.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/logic/selectcount.java" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

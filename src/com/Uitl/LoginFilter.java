@@ -55,6 +55,11 @@ public class LoginFilter implements Filter {
             return;
 
         }
+        if(path.indexOf(".jpg")>-1){
+            chain.doFilter(servletRequest, servletResponse);
+            return;
+
+        }
         TdUser user = (TdUser) session.getAttribute("USER");
         // 判断如果没有取到员工信息,就跳转到登陆页面
         if (user == null || "".equals(user.toString())) {

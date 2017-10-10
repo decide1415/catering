@@ -5,14 +5,12 @@ import java.sql.Date;
 /**
  * Created by decide on 2017/10/9.
  */
-public class TdTradeByUser {
+public class Tradeitemstb {
     private int userId;
     private Date time;
+    private int tcAitem;
+    private int tcBitem;
     private int count;
-    private int cotTcAbySta;
-    private int cotTcBbySta;
-    private int cotTcAbyStb;
-    private int cotTcBbyStb;
     private String userName;
 
     public int getUserId() {
@@ -31,44 +29,28 @@ public class TdTradeByUser {
         this.time = time;
     }
 
+    public int getTcAitem() {
+        return tcAitem;
+    }
+
+    public void setTcAitem(int tcAitem) {
+        this.tcAitem = tcAitem;
+    }
+
+    public int getTcBitem() {
+        return tcBitem;
+    }
+
+    public void setTcBitem(int tcBitem) {
+        this.tcBitem = tcBitem;
+    }
+
     public int getCount() {
         return count;
     }
 
     public void setCount(int count) {
         this.count = count;
-    }
-
-    public int getCotTcAbySta() {
-        return cotTcAbySta;
-    }
-
-    public void setCotTcAbySta(int cotTcAbySta) {
-        this.cotTcAbySta = cotTcAbySta;
-    }
-
-    public int getCotTcBbySta() {
-        return cotTcBbySta;
-    }
-
-    public void setCotTcBbySta(int cotTcBbySta) {
-        this.cotTcBbySta = cotTcBbySta;
-    }
-
-    public int getCotTcAbyStb() {
-        return cotTcAbyStb;
-    }
-
-    public void setCotTcAbyStb(int cotTcAbyStb) {
-        this.cotTcAbyStb = cotTcAbyStb;
-    }
-
-    public int getCotTcBbyStb() {
-        return cotTcBbyStb;
-    }
-
-    public void setCotTcBbyStb(int cotTcBbyStb) {
-        this.cotTcBbyStb = cotTcBbyStb;
     }
 
     public String getUserName() {
@@ -84,14 +66,12 @@ public class TdTradeByUser {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        TdTradeByUser that = (TdTradeByUser) o;
+        Tradeitemstb that = (Tradeitemstb) o;
 
         if (userId != that.userId) return false;
+        if (tcAitem != that.tcAitem) return false;
+        if (tcBitem != that.tcBitem) return false;
         if (count != that.count) return false;
-        if (cotTcAbySta != that.cotTcAbySta) return false;
-        if (cotTcBbySta != that.cotTcBbySta) return false;
-        if (cotTcAbyStb != that.cotTcAbyStb) return false;
-        if (cotTcBbyStb != that.cotTcBbyStb) return false;
         if (time != null ? !time.equals(that.time) : that.time != null) return false;
         if (userName != null ? !userName.equals(that.userName) : that.userName != null) return false;
 
@@ -102,11 +82,9 @@ public class TdTradeByUser {
     public int hashCode() {
         int result = userId;
         result = 31 * result + (time != null ? time.hashCode() : 0);
+        result = 31 * result + tcAitem;
+        result = 31 * result + tcBitem;
         result = 31 * result + count;
-        result = 31 * result + cotTcAbySta;
-        result = 31 * result + cotTcBbySta;
-        result = 31 * result + cotTcAbyStb;
-        result = 31 * result + cotTcBbyStb;
         result = 31 * result + (userName != null ? userName.hashCode() : 0);
         return result;
     }
