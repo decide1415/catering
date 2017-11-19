@@ -18,7 +18,15 @@
     <script src="../resource/bootstrap-3.3.7-dist/js//locales/bootstrap-datetimepicker.zh-CN.js"></script>
     <script src="../resource/Toolcanteenmain.js"></script>
     <script src="../resource/json2.js"></script>
+    <script src="../resource/jquery.PrintArea.js"></script>
+    <script>
 
+
+
+
+
+
+    </script>
 
 </head>
 <body>
@@ -74,7 +82,7 @@
                                                         </div>
                                                         <div class="col-md-4 column">
 
-                                                            <select class= "form-control selectpicker"  id="selecttype" ><option>食堂一</option ><option>食堂二</option ></select>
+                                                            <select class= "form-control selectpicker"  id="selecttype" ><option selected>食堂一</option ><option>食堂二</option ></select>
 
                                                         </div>
                                                         <div class="col-md-4 column">
@@ -87,8 +95,8 @@
                                                 </div>
                                             </div>
                                             <div class="row clearfix">
-                                                <div class="col-md-12 column">
-                                                    <table class="table table-hover table-bordered">
+                                                <div id="usertab" class="col-md-12 column">
+                                                    <table id="table"  class="table table-hover table-bordered">
                                                         <thead>
                                                         <tr>
                                                             <th>
@@ -101,6 +109,9 @@
                                                                 套餐二
                                                             </th>
                                                             <th>
+                                                                回民餐
+                                                            </th>
+                                                            <th name="conceal" >
                                                                 操作
                                                             </th>
                                                         </tr>
@@ -112,6 +123,21 @@
 
                                                         </tbody>
                                                     </table>
+                                                </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="row clearfix">
+                                                    <div class="col-md-12 column">
+                                                        <div class="row clearfix">
+                                                            <div class="col-md-4 column">
+                                                            </div>
+                                                            <div class="col-md-4 column">
+                                                                <button type="button" class="btn btn-default btn-primary"  data-dismiss="modal" onclick="printftable()">打印</button>
+                                                            </div>
+                                                            <div class="col-md-4 column">
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -136,7 +162,7 @@
                                                         </div>
                                                         <div class="modal-body">
                                                             <div class="form-group">
-                                                                <label for="addcanteenname">菜品名称</label><select class= "form-control selectpicker"  id="addcanteenname" ><option>套餐一</option ><option>套餐二</option ></select> <%--<input type="text" class="form-control" id="addcanteenname" />--%>
+                                                                <label for="addcanteenname">菜品名称</label><select class= "form-control selectpicker"  id="addcanteenname" ><option selected>套餐一</option ><option>套餐二</option ><option>回民餐</option ></select> <%--<input type="text" class="form-control" id="addcanteenname" />--%>
                                                             </div>
 
                                                             <div class="form-group">

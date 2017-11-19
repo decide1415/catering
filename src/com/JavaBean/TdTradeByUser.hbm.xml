@@ -13,5 +13,7 @@
         <property name="cotTcAbyStb" column="cotTCAbySTB"/>
         <property name="cotTcBbyStb" column="cotTCBbySTB"/>
         <property name="userName" column="user_name"/>
+        <property name="cotTcCbySta" column="cotTCCbySTA"/>
+        <property name="cotTcCbyStb" column="cotTCCbySTB"/>
     </class>
 </hibernate-mapping>

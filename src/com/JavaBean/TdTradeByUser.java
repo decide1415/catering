@@ -3,7 +3,7 @@ package com.JavaBean;
 import java.sql.Date;
 
 /**
- * Created by decide on 2017/10/9.
+ * Created by decide on 2017/10/11.
  */
 public class TdTradeByUser {
     private int userId;
@@ -14,6 +14,8 @@ public class TdTradeByUser {
     private int cotTcAbyStb;
     private int cotTcBbyStb;
     private String userName;
+    private int cotTcCbySta;
+    private int cotTcCbyStb;
 
     public int getUserId() {
         return userId;
@@ -79,6 +81,22 @@ public class TdTradeByUser {
         this.userName = userName;
     }
 
+    public int getCotTcCbySta() {
+        return cotTcCbySta;
+    }
+
+    public void setCotTcCbySta(int cotTcCbySta) {
+        this.cotTcCbySta = cotTcCbySta;
+    }
+
+    public int getCotTcCbyStb() {
+        return cotTcCbyStb;
+    }
+
+    public void setCotTcCbyStb(int cotTcCbyStb) {
+        this.cotTcCbyStb = cotTcCbyStb;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -92,6 +110,8 @@ public class TdTradeByUser {
         if (cotTcBbySta != that.cotTcBbySta) return false;
         if (cotTcAbyStb != that.cotTcAbyStb) return false;
         if (cotTcBbyStb != that.cotTcBbyStb) return false;
+        if (cotTcCbySta != that.cotTcCbySta) return false;
+        if (cotTcCbyStb != that.cotTcCbyStb) return false;
         if (time != null ? !time.equals(that.time) : that.time != null) return false;
         if (userName != null ? !userName.equals(that.userName) : that.userName != null) return false;
 
@@ -108,6 +128,8 @@ public class TdTradeByUser {
         result = 31 * result + cotTcAbyStb;
         result = 31 * result + cotTcBbyStb;
         result = 31 * result + (userName != null ? userName.hashCode() : 0);
+        result = 31 * result + cotTcCbySta;
+        result = 31 * result + cotTcCbyStb;
         return result;
     }
 }

@@ -3,7 +3,7 @@ package com.JavaBean;
 import java.sql.Date;
 
 /**
- * Created by decide on 2017/10/9.
+ * Created by decide on 2017/10/11.
  */
 public class Tradeitemstb {
     private int userId;
@@ -12,6 +12,7 @@ public class Tradeitemstb {
     private int tcBitem;
     private int count;
     private String userName;
+    private int tcCitem;
 
     public int getUserId() {
         return userId;
@@ -61,6 +62,14 @@ public class Tradeitemstb {
         this.userName = userName;
     }
 
+    public int getTcCitem() {
+        return tcCitem;
+    }
+
+    public void setTcCitem(int tcCitem) {
+        this.tcCitem = tcCitem;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -72,6 +81,7 @@ public class Tradeitemstb {
         if (tcAitem != that.tcAitem) return false;
         if (tcBitem != that.tcBitem) return false;
         if (count != that.count) return false;
+        if (tcCitem != that.tcCitem) return false;
         if (time != null ? !time.equals(that.time) : that.time != null) return false;
         if (userName != null ? !userName.equals(that.userName) : that.userName != null) return false;
 
@@ -86,6 +96,7 @@ public class Tradeitemstb {
         result = 31 * result + tcBitem;
         result = 31 * result + count;
         result = 31 * result + (userName != null ? userName.hashCode() : 0);
+        result = 31 * result + tcCitem;
         return result;
     }
 }

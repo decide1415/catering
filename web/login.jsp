@@ -5,6 +5,7 @@
   Time: 13:53
   To change this template use File | Settings | File Templates.
 --%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
@@ -23,14 +24,28 @@
 
 %>
     <script type="text/javascript">
+       function isc() {
+           var chrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());
+            //var is360 = (window.external&&window.external.twGetRunPath&&window.external.twGetRunPath().toLowerCase().indexOf("360se")>-1)
+
+           if(!chrome){
+                //下载浏览器
+                   alert("您正在使用非 360 浏览器  或浏览器非极速模式！\\n 入使用非360浏览器 请点击 网页下边 连接下载安装！\\n");
+
+               }
+
+       }
       if(<%=errcode%>){
         alert("登陆失败！请检查输入的用户名密码！")
 
       }
+      function download() {
+          window.open("/catering/resource/360se9.1.0.356.exe");
+      }
 
     </script>
   </head>
-  <body style="background:url('resource/DL.jpg') no-repeat center fixed;background-size:100% 100%;" >
+  <body style="background:url('resource/DL.jpg') no-repeat center fixed;background-size:100% 100%;" onload="isc()">
   <div class="container" > <%-- border-image: url('resource/DL.jpg');background-size:100% 100%--%>
     <div class="row clearfix">
       <div class="col-md-12 column">
@@ -61,6 +76,7 @@
                 </form>
               </div>
               <div class="col-md-4 column">
+                <button type="button" class="btn btn-default btn-primary" onclick="download()">浏览器下载</button>
               </div>
             </div>
           </div>

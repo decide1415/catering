@@ -10,7 +10,7 @@
         <property name="time" column="time"/>
         <property name="tcAitem" column="TCAitem"/>
         <property name="tcBitem" column="TCBitem"/>
-
         <property name="userName" column="user_name"/>
+        <property name="tcCitem" column="TCCitem"/>
     </class>
 </hibernate-mapping>

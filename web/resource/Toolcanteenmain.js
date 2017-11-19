@@ -122,7 +122,7 @@ function seelctcount() {
             var addstr = "";
         var tablearr = JSON.parse(data);
             for (var i = 0;i<tablearr.length;i++){
-                addstr+= "<tr class='success'> <td name ='selectuser'>"+tablearr[i].userName+"</td> <td name = 'selectT1' >"+tablearr[i].tcAitem+"</td> <td name = 'selectT2'>"+tablearr[i].tcBitem+"</td> <td><a class='btn btn-primary ' href='selectOthers.jsp?type="+selecttype+"&time="+selecttime+"&user="+tablearr[i].userId+"' target='_Blank'>详细</a></td> </tr>"  //onclick='selectOthers("+"'"+selecttype+"','"+selecttime+"','"+tablearr[i].userId+"')'
+                addstr+= "<tr class='success'> <td name ='selectuser'>"+tablearr[i].userName+"</td> <td name = 'selectT1' >"+tablearr[i].tcAitem+"</td> <td name = 'selectT2'>"+tablearr[i].tcBitem+"</td> <td name = 'selectT3'>"+tablearr[i].tcCitem+"</td> <td name='conceal'><a class='btn btn-primary ' href='selectOthers.jsp?type="+selecttype+"&time="+selecttime+"&user="+tablearr[i].userId+"' target='_Blank'  >详细</a></td> </tr>"  //onclick='selectOthers("+"'"+selecttype+"','"+selecttime+"','"+tablearr[i].userId+"')'
 
             }
         // if("食堂一"==selecttype){
@@ -143,7 +143,7 @@ function seelctcount() {
 // addstr+= "<tr class='success'> <td name ='selectuser'>"+tablearr[i].userId+"</td> <td name = 'selectT1' >"+tablearr[i].t1Count+"</td> <td name = 'selectT2'>"+tablearr[i].t2Count+"</td> <td></td> </tr>"
 //
 //         }
-            alert(data);
+//             alert(data);
 
             $("#selecttbody").empty();
         $("#selecttbody").append(addstr);
@@ -174,4 +174,12 @@ function exit() {
     // });
     window.location.href = "../login.jsp";
 
+}
+function printftable() {
+    $("td[name='conceal']").css('display','none');
+    $("th[name='conceal']").css('display','none');
+
+    $("#usertab").printArea();
+    $("td[name='conceal']").css('display','');
+    $("th[name='conceal']").css('display','');
 }

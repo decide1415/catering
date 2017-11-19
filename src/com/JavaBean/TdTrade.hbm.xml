@@ -12,5 +12,6 @@
         <property name="time" column="time"/>
         <property name="canteentype" column="canteentype"/>
         <property name="eattype" column="eattype"/>
+        <property name="timetype" column="timetype"/>
     </class>
 </hibernate-mapping>

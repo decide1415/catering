@@ -30,6 +30,7 @@
 
         <mapping resource="com/JavaBean/Tradeitemsta.hbm.xml"/>
         <mapping resource="com/JavaBean/Tradeitemstb.hbm.xml"/>
+        <mapping resource="com/JavaBean/TdMember.hbm.xml"/>
         <!--<property name="connection.url">jdbc:mysql://localhost:3306/catering</property>-->
         <!--<property name="connection.driver_class">com.mysql.jdbc.Driver</property>-->
 

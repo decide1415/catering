@@ -104,4 +104,28 @@
         <servlet-name>exit</servlet-name>
         <url-pattern>/exit.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>statistics</servlet-name>
+        <servlet-class>com.logic.statistics</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>statistics</servlet-name>
+        <url-pattern>/statistics.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>checktodate</servlet-name>
+        <servlet-class>com.logic.checktodate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>checktodate</servlet-name>
+        <url-pattern>/checktodate.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>selectmember</servlet-name>
+        <servlet-class>com.logic.selectmember</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>selectmember</servlet-name>
+        <url-pattern>/selectmember.do</url-pattern>
+    </servlet-mapping>
 </web-app>

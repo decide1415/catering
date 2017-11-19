@@ -3,7 +3,7 @@ package com.JavaBean;
 import java.sql.Date;
 
 /**
- * Created by decide on 2017/10/9.
+ * Created by decide on 2017/10/12.
  */
 public class TdTrade {
     private int userId;
@@ -13,6 +13,7 @@ public class TdTrade {
     private String canteentype;
     private String eattype;
     private int item;
+    private String timetype;
 
     public int getUserId() {
         return userId;
@@ -70,6 +71,14 @@ public class TdTrade {
         this.item = item;
     }
 
+    public String getTimetype() {
+        return timetype;
+    }
+
+    public void setTimetype(String timetype) {
+        this.timetype = timetype;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -84,6 +93,7 @@ public class TdTrade {
         if (time != null ? !time.equals(tdTrade.time) : tdTrade.time != null) return false;
         if (canteentype != null ? !canteentype.equals(tdTrade.canteentype) : tdTrade.canteentype != null) return false;
         if (eattype != null ? !eattype.equals(tdTrade.eattype) : tdTrade.eattype != null) return false;
+        if (timetype != null ? !timetype.equals(tdTrade.timetype) : tdTrade.timetype != null) return false;
 
         return true;
     }
@@ -97,6 +107,7 @@ public class TdTrade {
         result = 31 * result + (canteentype != null ? canteentype.hashCode() : 0);
         result = 31 * result + (eattype != null ? eattype.hashCode() : 0);
         result = 31 * result + item;
+        result = 31 * result + (timetype != null ? timetype.hashCode() : 0);
         return result;
     }
 }

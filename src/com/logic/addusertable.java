@@ -7,6 +7,7 @@ import com.Uitl.HibernateUtils;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import netscape.javascript.JSObject;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -36,19 +37,26 @@ public class addusertable extends HttpServlet {
 //  int canteen1count = 0;
 //        int canteen2count = 0;
         int TC1byST1 = 0;
-        int TC1byST2 = 0;int TC2byST1 = 0;int TC2byST2 = 0;
+        int TC1byST2 = 0;
+        int TC2byST1 = 0;
+        int TC2byST2 = 0;
+        int TC3byST1 = 0;
+        int TC3byST2 = 0;
 
 
     String tablejsonTC1 = req.getParameter("tablejsonTC1");
         String tablejsonTC2 = req.getParameter("tablejsonTC2");
+        String tablejsonTC3 = req.getParameter("tablejsonTC3");
         System.out.println(tablejsonTC1);
         System.out.println(tablejsonTC2);
         TdUser user = (TdUser)req.getSession().getAttribute("USER");
     String time = req.getParameter("time");time +=" 00:00:00";
     List<TdTrade> tradeList  =new ArrayList<TdTrade>();
         List<TdTrade> tradeListA  =new ArrayList<TdTrade>();
+        List<TdTrade> tradeListB  =new ArrayList<TdTrade>();
      JSONArray TC1arr = JSON.parseArray(tablejsonTC1);
         JSONArray TC2arr = JSON.parseArray(tablejsonTC2);
+        JSONArray TC3arr = JSON.parseArray(tablejsonTC3);
         for(int i = 0;i<TC1arr.size();i++){
             JSONObject jobj = TC1arr.getJSONObject(i);
             TdTrade t = new TdTrade();
@@ -58,6 +66,7 @@ public class addusertable extends HttpServlet {
             t.setEattype(jobj.getString("eattype"));
             t.setDishestype(jobj.getString("subtype"));
             t.setCanteentype(jobj.getString("canteentype"));
+            t.setTimetype(jobj.getString("timetype"));
             tradeList.add(t);
             if("食堂一".equals(jobj.getString("canteentype"))){
                 TC1byST1+=1;
@@ -75,11 +84,30 @@ public class addusertable extends HttpServlet {
             t.setEattype(jobj.getString("eattype"));
             t.setDishestype(jobj.getString("subtype"));
             t.setCanteentype(jobj.getString("canteentype"));
+            t.setTimetype(jobj.getString("timetype"));
             tradeListA.add(t);
             if("食堂一".equals(jobj.getString("canteentype"))){
                 TC2byST1+=1;
             }else if("食堂二".equals(jobj.getString("canteentype"))){
                 TC2byST2+=1;
+
+            }
+        }
+        for(int i = 0;i<TC3arr.size();i++){
+            JSONObject jobj = TC3arr.getJSONObject(i);
+            TdTrade t = new TdTrade();
+            t.setTime(stringTOdate(time));
+            t.setUserId(user.getId());
+            t.setMembername(jobj.getString("membername"));
+            t.setEattype(jobj.getString("eattype"));
+            t.setDishestype(jobj.getString("subtype"));
+            t.setCanteentype(jobj.getString("canteentype"));
+            t.setTimetype(jobj.getString("timetype"));
+            tradeListB.add(t);
+            if("食堂一".equals(jobj.getString("canteentype"))){
+                TC3byST1+=1;
+            }else if("食堂二".equals(jobj.getString("canteentype"))){
+                TC3byST2+=1;
 
             }
         }
@@ -107,6 +135,17 @@ public class addusertable extends HttpServlet {
        }
 
        se.close();
+       Session see = HibernateUtils.getSession();
+
+       for(TdTrade tt:tradeListB){
+           Transaction transaction3 = see.beginTransaction();
+           see.save(tt);
+           see.flush();
+           transaction3.commit();
+           see.clear();
+
+       }
+       see.close();
         TdTradeByUser ttbu = new TdTradeByUser();
         ttbu.setTime(stringTOdate(time));
         ttbu.setUserId(user.getId());
@@ -115,6 +154,9 @@ public class addusertable extends HttpServlet {
         ttbu.setCotTcAbyStb(TC1byST2);
         ttbu.setCotTcBbySta(TC2byST1);
         ttbu.setCotTcBbyStb(TC2byST2);
+        ttbu.setCotTcCbySta(TC3byST1);
+        ttbu.setCotTcCbyStb(TC3byST2);
+//        ttbu.setCotTcabyStc(TC3byST1);
         Session session1 = HibernateUtils.getSession();
         Transaction transaction1 = session1.beginTransaction();
         session1.save(ttbu);

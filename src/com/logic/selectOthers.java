@@ -2,8 +2,12 @@ package com.logic;
 
 import com.JavaBean.TdTrade;
 import com.Uitl.HibernateUtils;
+import com.sun.nio.sctp.PeerAddressChangeNotification;
 import org.hibernate.Query;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
+import org.hibernate.transform.Transformers;
+import org.hibernate.type.StandardBasicTypes;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +17,9 @@ import java.io.IOException;
 import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by decide on 2017/10/8.
@@ -41,8 +47,17 @@ public class selectOthers implements Filter {
        List<TdTrade> tradelist =  query.list();
        hibsession.close();
        req.setAttribute("tradelist",tradelist);
-
-
+       Session session1 = HibernateUtils.getSession();
+        SQLQuery sqlQuery = session1.createSQLQuery("SELECT dishestype,eattype, COUNT(eattype) AS item FROM td_trade WHERE  time = ?and user_id = ?and canteentype = ? GROUP BY dishestype,eattype");
+//        sqlQuery.addScalar("dishestype");
+//        sqlQuery.addScalar("eattype");
+//        sqlQuery.addScalar("item");
+        sqlQuery.setDate(0,stringTOdate(time));
+        sqlQuery.setString(1,user);
+        sqlQuery.setString(2,type);
+        sqlQuery.setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
+        List<Map<String,Object>> useritem = sqlQuery.list();
+        req.setAttribute("useritem",useritem);
         filterChain.doFilter(req,resp);
     }
 
